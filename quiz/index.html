@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IX 人財分析テスト | あなたのコミュニケーションスタイルを診断</title>
+  <meta name="description" content="IX 人財分析に基づく45問のパーソナリティ診断テスト。6つのタイプからあなたのコミュニケーションスタイルを分析します。">
+  <!-- OGP for LINE / SNS preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="IX 人財分析テスト">
+  <meta property="og:description" content="IX 人財分析に基づく45問のパーソナリティ診断。6つのタイプからあなたのコミュニケーションスタイルを分析します。">
+  <meta property="og:url" content="https://ix-jinzai-analysis.vercel.app">
+  <meta property="og:site_name" content="IX 人財分析">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="IX 人財分析テスト">
+  <meta name="twitter:description" content="IX 人財分析に基づく45問のパーソナリティ診断。6つのタイプからあなたのコミュニケーションスタイルを分析します。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ===== Hero Section ===== -->
+  <section id="hero">
+    <!-- Geometric Decorations -->
+    <div class="geo-decor-1"></div>
+    <div class="geo-decor-2"></div>
+    <div class="geo-decor-3"></div>
+    <div class="geo-decor-4"></div>
+    <div class="geo-line-1"></div>
+    <div class="geo-line-2"></div>
+
+    <div class="hero-badge">
+      <span class="dot"></span>
+      IX Personality Diagnosis
+    </div>
+    <h1 class="hero-title">IX 人財分析テスト</h1>
+    <div class="hero-separator"></div>
+    <p class="hero-subtitle">あなたのコミュニケーションスタイルを<br>6つのタイプから診断します</p>
+    <p class="hero-description">
+      IX 人財分析は、コミュニケーション理論に基づく性格診断です。
+      全45問に回答して、
+      あなたの「基本タイプ」を発見しましょう。
+    </p>
+    <div class="type-preview">
+      <div class="type-chip"><span class="color-dot" style="background:#4a9eff"></span>青</div>
+      <div class="type-chip"><span class="color-dot" style="background:#9b59b6"></span>紫</div>
+      <div class="type-chip"><span class="color-dot" style="background:#ff8c42"></span>橙</div>
+      <div class="type-chip"><span class="color-dot" style="background:#8B6914"></span>茶</div>
+      <div class="type-chip"><span class="color-dot" style="background:#e74c3c"></span>赤</div>
+      <div class="type-chip"><span class="color-dot" style="background:#f1c40f"></span>黄</div>
+    </div>
+    <button class="btn-start" onclick="startQuiz()">
+      診断をはじめる
+      <span class="arrow">→</span>
+    </button>
+  </section>
+
+  <!-- ===== Quiz Section ===== -->
+  <section id="quiz">
+    <div class="container">
+      <div class="progress-wrapper">
+        <div class="progress-info">
+          <span class="progress-label">Progress</span>
+          <span class="progress-count" id="progressCurrent"><strong>1</strong> / 45</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill" style="width: 2.2%"></div>
+        </div>
+      </div>
+
+      <div class="question-card" id="questionCard"></div>
+
+      <div class="validation-message" id="validationMsg"></div>
+
+      <div class="quiz-nav">
+        <button class="btn-nav" id="btnPrev" onclick="prevQuestion()" disabled>← 前へ</button>
+        <button class="btn-nav primary" id="btnNext" onclick="nextQuestion()">次へ →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Results Section ===== -->
+  <section id="results">
+    <div class="container">
+      <div class="results-header">
+        <div class="results-badge">
+          <span>✓</span> Analysis Complete
+        </div>
+        <h2 class="results-title">あなたの分析結果</h2>
+        <p class="results-subtitle">IX 6タイプの優先順位が判明しました</p>
+      </div>
+
+      <!-- Radar Chart -->
+      <div class="chart-section">
+        <div class="chart-container">
+          <div class="chart-title">Personality Radar Chart</div>
+          <canvas id="radarChart" width="420" height="420"></canvas>
+        </div>
+      </div>
+
+      <!-- Ranking -->
+      <div class="ranking-section">
+        <h3 class="ranking-title">タイプ別 順位</h3>
+        <div class="ranking-list" id="rankingList"></div>
+      </div>
+
+      <!-- Type Details -->
+      <div class="type-details">
+        <h3 class="detail-title">あなたのトップ3タイプ</h3>
+        <div id="typeDetails"></div>
+      </div>
+
+      <!-- Retry -->
+      <div class="retry-section">
+        <button class="btn-retry" onclick="retryQuiz()">
+          ↻ もう一度診断する
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Loading Overlay ===== -->
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Analyzing Results...</div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
