@@ -13,8 +13,8 @@
   --deep-navy: #0d0d2b;
   --royal-blue: #1e3a6e;
   --accent-blue: #2c4f8a;
-  --gold: #c4a35a;
-  --gold-light: #d4b96a;
+  --gold: #c23c3c;
+  --gold-light: #d45555;
   --beige: #f0ebe4;
   --beige-dark: #e5ddd2;
   --white: #ffffff;
@@ -130,7 +130,7 @@ img {
   font-family: var(--font-display);
   font-size: 20px;
   font-weight: 600;
-  color: var(--gold);
+  color: var(--white);
   letter-spacing: 0.05em;
   writing-mode: vertical-rl;
   text-orientation: mixed;
@@ -1214,7 +1214,7 @@ img {
   font-family: var(--font-display);
   font-size: 18px;
   font-weight: 600;
-  color: var(--gold);
+  color: var(--white);
   letter-spacing: 0.1em;
 }
 
@@ -1399,7 +1399,7 @@ img {
     font-family: var(--font-display);
     font-size: 18px;
     font-weight: 600;
-    color: var(--gold);
+    color: var(--white);
     letter-spacing: 0.05em;
   }
 
