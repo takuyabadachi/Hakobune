@@ -21,8 +21,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
+      const href = link.getAttribute('href');
+      // Only intercept hash links for smooth scroll; let external links navigate normally
+      if (!href.startsWith('#')) {
+        navOverlay.classList.remove('active');
+        menuBtn?.classList.remove('active');
+        document.body.style.overflow = '';
+        return;
+      }
       e.preventDefault();
-      const target = document.querySelector(link.getAttribute('href'));
+      const target = document.querySelector(href);
       if (target) {
         navOverlay.classList.remove('active');
         menuBtn?.classList.remove('active');

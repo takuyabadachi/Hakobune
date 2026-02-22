@@ -584,7 +584,7 @@ function prevQuestion() {
 }
 
 function nextQuestion() {
-    // if (!validateQuestion()) return; // レビュー用に一時解除
+    if (!validateQuestion()) return;
 
     if (currentQuestion < QUESTIONS.length - 1) {
         currentQuestion++;
