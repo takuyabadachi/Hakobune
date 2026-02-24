@@ -1282,8 +1282,6 @@ body {
 
   /* ---------- Global layout ---------- */
   .slide {
-    align-items: flex-start;
-    justify-content: flex-start;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
@@ -1294,10 +1292,6 @@ body {
   }
 
   /* ---------- S1: Cover ---------- */
-  .slide-content--cover {
-    padding-top: 3rem;
-  }
-
   .label {
     font-size: 0.6rem;
   }
