@@ -52,6 +52,7 @@ body {
   background: var(--black);
   overflow: hidden;
   height: 100vh;
+  height: 100dvh;
   width: 100vw;
 }
 
@@ -60,12 +61,14 @@ body {
   display: flex;
   width: max-content;
   height: 100vh;
+  height: 100dvh;
   transition: transform 0.65s var(--ease);
 }
 
 .slide {
   width: 100vw;
   height: 100vh;
+  height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1277,15 +1280,13 @@ body {
 /* ========== MOBILE ========== */
 @media (max-width: 600px) {
   .slide-content {
-    padding: 0.8rem 1rem 4rem;
+    padding: 0.8rem 1rem 3rem;
     max-width: 100%;
   }
 
   .slide {
-    align-items: flex-start;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    padding-top: 0.5rem;
   }
 
   /* S1: Cover */
