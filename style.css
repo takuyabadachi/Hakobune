@@ -268,7 +268,8 @@ img {
   transition-delay: 0.45s;
 }
 
-.nav-overlay__list a:hover {
+.nav-overlay__list a:hover,
+.nav-overlay__list a:active {
   color: var(--gold);
   opacity: 1;
 }
@@ -556,7 +557,7 @@ img {
 
 .hero__title span {
   font-style: normal;
-  color: var(--gold);
+  color: var(--white);
 }
 
 .hero__subtitle {
