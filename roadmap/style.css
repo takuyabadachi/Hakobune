@@ -1517,29 +1517,57 @@ body {
     padding: 0.3rem 0.5rem;
   }
 
-  /* ---------- S4: CR Allocation ---------- */
+  /* ---------- S4: CR Allocation → card-style on mobile ---------- */
   .alloc {
     flex-direction: column;
     gap: 0.3rem;
   }
 
-  .alloc-block {
-    width: 100%;
+  .alloc-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .bar-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 0.6rem 0.8rem;
+    position: relative;
+  }
+
+  .bar-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .bar-track {
+    order: -1;
+  }
+
+  .bar-fill {
+    height: 22px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    width: 100% !important;
+    border-radius: 4px;
+  }
+
+  .bar-pct {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.8rem;
+    font-size: 0.65rem;
+    color: var(--silver);
   }
 
   .alloc-total {
     padding: 0.5rem;
     font-size: 0.7rem;
-  }
-
-  .bar-row {
-    grid-template-columns: 55px 1fr 28px;
-    gap: 0.2rem;
-    font-size: 0.6rem;
-  }
-
-  .bar-fill {
-    height: 16px;
   }
 
   /* ---------- S6/S7: Card grids → 2-col compact ---------- */
