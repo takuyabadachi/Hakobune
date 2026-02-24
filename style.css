@@ -838,7 +838,7 @@ img {
   content: '';
   position: absolute;
   left: 0;
-  top: 10px;
+  top: 0.75em;
   width: 6px;
   height: 1px;
   background: var(--gold);
@@ -1217,6 +1217,8 @@ img {
   font-weight: 600;
   color: var(--white);
   letter-spacing: 0.1em;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .footer__text {
@@ -1402,6 +1404,8 @@ img {
     font-weight: 600;
     color: var(--white);
     letter-spacing: 0.05em;
+    text-decoration: none;
+    cursor: pointer;
   }
 
   .mobile-header__btn {
