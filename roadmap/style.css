@@ -1070,6 +1070,22 @@ body {
   background: var(--c-web);
 }
 
+.forecast-card--web::before {
+  background: var(--c-web);
+}
+
+.forecast-card--auto::before {
+  background: var(--c-auto);
+}
+
+.forecast-card--ops::before {
+  background: var(--c-ops);
+}
+
+.forecast-card--buf::before {
+  background: var(--c-buf);
+}
+
 .forecast-card:hover {
   border-color: var(--silver-faint);
   transform: translateY(-2px);
@@ -1097,6 +1113,22 @@ body {
 
 .forecast-card--rev .forecast-header .material-icons-outlined {
   color: var(--c-web);
+}
+
+.forecast-card--web .forecast-header .material-icons-outlined {
+  color: var(--c-web);
+}
+
+.forecast-card--auto .forecast-header .material-icons-outlined {
+  color: var(--c-auto);
+}
+
+.forecast-card--ops .forecast-header .material-icons-outlined {
+  color: var(--c-ops);
+}
+
+.forecast-card--buf .forecast-header .material-icons-outlined {
+  color: var(--c-buf);
 }
 
 .forecast-conf {
