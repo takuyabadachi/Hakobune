@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function toggleNav() {
     const isActive = navOverlay.classList.toggle('active');
     menuBtn?.classList.toggle('active', isActive);
+    mobileMenuBtn?.classList.toggle('active', isActive);
     document.body.style.overflow = isActive ? 'hidden' : '';
   }
 
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!href.startsWith('#')) {
         navOverlay.classList.remove('active');
         menuBtn?.classList.remove('active');
+        mobileMenuBtn?.classList.remove('active');
         document.body.style.overflow = '';
         return;
       }
@@ -34,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (target) {
         navOverlay.classList.remove('active');
         menuBtn?.classList.remove('active');
+        mobileMenuBtn?.classList.remove('active');
         document.body.style.overflow = '';
         setTimeout(() => {
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -114,12 +117,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ========== PARALLAX FOR GEOMETRIC PATTERN ==========
   const heroPattern = document.querySelector('.hero__pattern');
-  
+
   if (heroPattern) {
     window.addEventListener('scroll', () => {
       const scrollY = window.scrollY;
       const heroHeight = document.querySelector('.hero').offsetHeight;
-      
+
       if (scrollY < heroHeight) {
         const translateY = scrollY * 0.3;
         const scale = 1 + scrollY * 0.0002;
@@ -155,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ========== CURSOR GLOW EFFECT ON HERO ==========
   const hero = document.querySelector('.hero');
-  
+
   if (hero) {
     const glow = document.createElement('div');
     glow.style.cssText = `
@@ -186,13 +189,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ========== SMOOTH HOVER FOR TRACK RECORD ITEMS ==========
   const trackItems = document.querySelectorAll('.track-record__item');
-  
+
   trackItems.forEach(item => {
     item.addEventListener('mouseenter', () => {
       item.style.transition = 'background 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
       item.style.transform = 'scale(1.02)';
     });
-    
+
     item.addEventListener('mouseleave', () => {
       item.style.transform = 'scale(1)';
     });
