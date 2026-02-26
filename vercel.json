@@ -3,7 +3,7 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "/consulting/",
+      "destination": "/ixconsulting/",
       "permanent": true
     }
   ]
