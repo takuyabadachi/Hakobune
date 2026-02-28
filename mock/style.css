@@ -951,8 +951,14 @@ ol {
     }
 
     .footer__links {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: center;
+        gap: var(--space-sm);
+    }
+
+    .footer__link {
+        letter-spacing: 0.08em;
+        font-size: 0.6rem;
     }
 }
 
