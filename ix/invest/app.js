@@ -249,7 +249,17 @@ function renderStep1() {
 function selectStep1(index) {
   step1Answers[step1Index] = index;
   document.getElementById('validationMsg1').classList.remove('show');
-  renderStep1();
+  // Toggle selected state without re-rendering
+  const items = document.querySelectorAll('#questionCard1 .option-item');
+  items.forEach((item, i) => {
+    if (i === index) {
+      item.classList.add('selected');
+      item.querySelector('.option-radio').innerHTML = '<div style="width:6px;height:6px;border-radius:50%;background:#0d1117;"></div>';
+    } else {
+      item.classList.remove('selected');
+      item.querySelector('.option-radio').innerHTML = '';
+    }
+  });
 }
 
 function prevStep1() {
@@ -341,7 +351,17 @@ function renderStep2() {
 function selectStep2(index) {
   step2Answers[step2Index] = index;
   document.getElementById('validationMsg2').classList.remove('show');
-  renderStep2();
+  // Toggle selected state without re-rendering
+  const items = document.querySelectorAll('#questionCard2 .option-item');
+  items.forEach((item, i) => {
+    if (i === index) {
+      item.classList.add('selected');
+      item.querySelector('.option-radio').innerHTML = '<div style="width:6px;height:6px;border-radius:50%;background:#0d1117;"></div>';
+    } else {
+      item.classList.remove('selected');
+      item.querySelector('.option-radio').innerHTML = '';
+    }
+  });
 }
 
 function prevStep2() {
