@@ -805,7 +805,7 @@ ol {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 16px 48px;
+    padding: 16px 48px 16px calc(48px + 0.3em);
     border: 1px solid var(--color-border-hover);
     font-size: 0.75rem;
     font-weight: var(--fw-light);
