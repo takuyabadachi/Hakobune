@@ -392,13 +392,15 @@ ol {
 .hero__scroll {
     position: absolute;
     bottom: var(--space-lg);
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: var(--space-sm);
+    width: fit-content;
     opacity: 0;
     animation: heroFadeUp 1.2s var(--ease-out) 1.4s forwards;
 }
