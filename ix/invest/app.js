@@ -1,35 +1,43 @@
 // ===== Investment Categories =====
 const CATEGORIES = {
-  finance: { id: 'finance', name: '金融投資', nameEn: 'Financial Investment', icon: '📊', color: '#4a9eff', cssClass: 'finance',
-    desc: 'あなたは論理的思考とデータ分析に優れ、金融市場での投資が最も適しています。株式、債券、投資信託など、伝統的な金融商品を通じた資産形成がおすすめです。市場の動向を読み解き、戦略的な判断ができるタイプです。' },
-  realestate: { id: 'realestate', name: '不動産投資', nameEn: 'Real Estate Investment', icon: '🏢', color: '#2ecc71', cssClass: 'realestate',
-    desc: 'あなたは安定志向で、長期的な視点を持つ実直なタイプ。不動産を通じた着実な資産形成が向いています。賃貸収入（インカムゲイン）と資産価値の上昇（キャピタルゲイン）の両面から、堅実な投資を実現できるでしょう。' },
-  alternative: { id: 'alternative', name: 'オルタナティブ投資', nameEn: 'Alternative Investment', icon: '💎', color: '#c9a96e', cssClass: 'alternative',
-    desc: 'あなたは独自の審美眼と感性を持ち、実物資産への投資が最も輝くタイプ。アート、時計、ワインなど、あなたの知識と情熱が直接価値につながるオルタナティブ投資の世界が待っています。' },
-  other: { id: 'other', name: 'バランス型投資', nameEn: 'Balanced Investment', icon: '⚖️', color: '#95a5a6', cssClass: 'other',
-    desc: 'あなたはバランス感覚に優れ、特定のカテゴリに偏らない柔軟な投資スタイルが向いています。複数の資産クラスに分散投資することで、リスクを抑えながら着実なリターンを目指せるタイプです。' }
+  finance: {
+    id: 'finance', name: '金融投資', nameEn: 'Financial Investment', icon: '📊', color: '#4a9eff', cssClass: 'finance',
+    desc: 'あなたは論理的思考とデータ分析に優れ、金融市場での投資が最も適しています。株式、債券、投資信託など、伝統的な金融商品を通じた資産形成がおすすめです。市場の動向を読み解き、戦略的な判断ができるタイプです。'
+  },
+  realestate: {
+    id: 'realestate', name: '不動産投資', nameEn: 'Real Estate Investment', icon: '🏢', color: '#2ecc71', cssClass: 'realestate',
+    desc: 'あなたは安定志向で、長期的な視点を持つ実直なタイプ。不動産を通じた着実な資産形成が向いています。賃貸収入（インカムゲイン）と資産価値の上昇（キャピタルゲイン）の両面から、堅実な投資を実現できるでしょう。'
+  },
+  alternative: {
+    id: 'alternative', name: 'オルタナティブ投資', nameEn: 'Alternative Investment', icon: '💎', color: '#c9a96e', cssClass: 'alternative',
+    desc: 'あなたは独自の審美眼と感性を持ち、実物資産への投資が最も輝くタイプ。アート、時計、ワインなど、あなたの知識と情熱が直接価値につながるオルタナティブ投資の世界が待っています。'
+  },
+  other: {
+    id: 'other', name: 'バランス型投資', nameEn: 'Balanced Investment', icon: '⚖️', color: '#95a5a6', cssClass: 'other',
+    desc: 'あなたはバランス感覚に優れ、特定のカテゴリに偏らない柔軟な投資スタイルが向いています。複数の資産クラスに分散投資することで、リスクを抑えながら着実なリターンを目指せるタイプです。'
+  }
 };
 
 // ===== Alternative Investment Sub-Categories =====
 const ALT_CATEGORIES = [
-  { id: 'denim',       name: 'デニム',              icon: '👖',  tags: ['fashion', 'vintage', 'trend'] },
-  { id: 'vintage_tee', name: 'ヴィンテージTシャツ',   icon: '👕',  tags: ['fashion', 'vintage', 'pop'] },
-  { id: 'watch',       name: '時計',                icon: '⌚',  tags: ['luxury', 'mechanic', 'classic'] },
-  { id: 'sneaker',     name: 'スニーカー',            icon: '👟',  tags: ['fashion', 'trend', 'pop'] },
-  { id: 'wine',        name: 'ワイン・ウイスキー',     icon: '🍷',  tags: ['luxury', 'gourmet', 'classic'] },
-  { id: 'hobby',       name: 'ホビー',               icon: '🎮',  tags: ['pop', 'collection', 'trend'] },
-  { id: 'bag',         name: 'バッグ',               icon: '👜',  tags: ['luxury', 'fashion', 'classic'] },
-  { id: 'card',        name: 'トレーディングカード',    icon: '🃏',  tags: ['pop', 'collection', 'trend'] },
-  { id: 'antique',     name: '骨董',                icon: '🏺',  tags: ['classic', 'culture', 'rare'] },
-  { id: 'memorabilia', name: 'メモラビリア',           icon: '🏆',  tags: ['collection', 'rare', 'pop'] },
-  { id: 'furniture',   name: '家具',                icon: '🪑',  tags: ['design', 'classic', 'culture'] },
-  { id: 'instrument',  name: '楽器',                icon: '🎸',  tags: ['culture', 'mechanic', 'vintage'] },
-  { id: 'silver',      name: 'シルバーアクセサリ',     icon: '💍',  tags: ['fashion', 'mechanic', 'culture'] },
-  { id: 'metal',       name: '貴金属',               icon: '🥇',  tags: ['luxury', 'safe', 'classic'] },
-  { id: 'jewelry',     name: 'ジュエリー',            icon: '💎',  tags: ['luxury', 'rare', 'classic'] },
-  { id: 'coin',        name: 'アンティークコイン',     icon: '🪙',  tags: ['classic', 'rare', 'collection'] },
-  { id: 'art',         name: 'アート',               icon: '🎨',  tags: ['culture', 'design', 'rare'] },
-  { id: 'sword',       name: '刀剣',                icon: '⚔️',  tags: ['culture', 'classic', 'rare'] }
+  { id: 'denim', name: 'デニム', icon: '👖', tags: ['fashion', 'vintage', 'trend'] },
+  { id: 'vintage_tee', name: 'ヴィンテージTシャツ', icon: '👕', tags: ['fashion', 'vintage', 'pop'] },
+  { id: 'watch', name: '時計', icon: '⌚', tags: ['luxury', 'mechanic', 'classic'] },
+  { id: 'sneaker', name: 'スニーカー', icon: '👟', tags: ['fashion', 'trend', 'pop'] },
+  { id: 'wine', name: 'ワイン・ウイスキー', icon: '🍷', tags: ['luxury', 'gourmet', 'classic'] },
+  { id: 'hobby', name: 'ホビー', icon: '🎮', tags: ['pop', 'collection', 'trend'] },
+  { id: 'bag', name: 'バッグ', icon: '👜', tags: ['luxury', 'fashion', 'classic'] },
+  { id: 'card', name: 'トレーディングカード', icon: '🃏', tags: ['pop', 'collection', 'trend'] },
+  { id: 'antique', name: '骨董', icon: '🏺', tags: ['classic', 'culture', 'rare'] },
+  { id: 'memorabilia', name: 'メモラビリア', icon: '🏆', tags: ['collection', 'rare', 'pop'] },
+  { id: 'furniture', name: '家具', icon: '🪑', tags: ['design', 'classic', 'culture'] },
+  { id: 'instrument', name: '楽器', icon: '🎸', tags: ['culture', 'mechanic', 'vintage'] },
+  { id: 'silver', name: 'シルバーアクセサリ', icon: '💍', tags: ['fashion', 'mechanic', 'culture'] },
+  { id: 'metal', name: '貴金属', icon: '🥇', tags: ['luxury', 'safe', 'classic'] },
+  { id: 'jewelry', name: 'ジュエリー', icon: '💎', tags: ['luxury', 'rare', 'classic'] },
+  { id: 'coin', name: 'アンティークコイン', icon: '🪙', tags: ['classic', 'rare', 'collection'] },
+  { id: 'art', name: 'アート', icon: '🎨', tags: ['culture', 'design', 'rare'] },
+  { id: 'sword', name: '刀剣', icon: '⚔️', tags: ['culture', 'classic', 'rare'] }
 ];
 
 // ===== STEP 1 Questions: Category Sort (5 questions, 4 choices each) =====
@@ -138,6 +146,9 @@ let step2Index = 0;
 const step1Answers = Array(STEP1_QUESTIONS.length).fill(null);
 const step2Answers = Array(STEP2_QUESTIONS.length).fill(null);
 let lineAdded = false;
+let pendingResultType = null; // 'category' or 'alternative'
+let pendingCategoryId = null;
+let pendingScores = null;
 
 // ===== DOM Elements =====
 const heroSection = document.getElementById('hero');
@@ -181,9 +192,13 @@ function showLineSection() {
 
 function onLineAdded() {
   lineAdded = true;
-  // Small delay so user can see the click, then proceed
+  // Show the pending results after LINE registration
   setTimeout(() => {
-    startQuiz();
+    if (pendingResultType === 'alternative') {
+      showAlternativeResult();
+    } else if (pendingResultType === 'category') {
+      showCategoryResult(pendingCategoryId, pendingScores);
+    }
   }, 500);
 }
 
@@ -278,8 +293,11 @@ function nextStep1() {
       renderStep2();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
-      // Show results directly
-      showCategoryResult(topCategory, scores);
+      // Store pending result and show LINE gate
+      pendingResultType = 'category';
+      pendingCategoryId = topCategory;
+      pendingScores = scores;
+      showLineSection();
     }
   }
 }
@@ -347,7 +365,9 @@ function nextStep2() {
     renderStep2();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   } else {
-    showAlternativeResult();
+    // Store pending result and show LINE gate
+    pendingResultType = 'alternative';
+    showLineSection();
   }
 }
 

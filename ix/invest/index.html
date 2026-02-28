@@ -51,16 +51,17 @@
       <div class="type-chip"><span class="color-dot" style="background:#c9a96e"></span>オルタナティブ</div>
       <div class="type-chip"><span class="color-dot" style="background:#95a5a6"></span>その他</div>
     </div>
-    <button class="btn-start" id="btnStartHero" onclick="showLineSection()">
+    <button class="btn-start" id="btnStartHero" onclick="startQuiz()">
       診断をはじめる
       <span class="arrow">→</span>
     </button>
   </section>
 
-  <!-- ===== LINE Registration Section ===== -->
+  <!-- ===== LINE Gate Section (shown after quiz, before results) ===== -->
   <section id="lineSection">
     <div class="container">
       <div class="line-card">
+        <div class="line-complete-badge">✓ 診断完了</div>
         <div class="line-icon-wrapper">
           <svg class="line-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="48" height="48" rx="12" fill="#06C755" />
@@ -81,10 +82,10 @@
               fill="#06C755" />
           </svg>
         </div>
-        <h2 class="line-title">LINE友だち追加で<br>診断スタート</h2>
+        <h2 class="line-title">LINE友だち追加で<br>診断結果を受け取る</h2>
         <p class="line-desc">
-          診断結果の詳細レポートや、あなたに最適な<br>
-          投資情報をLINEでお届けします。
+          あなたの診断結果が出ました！<br>
+          LINE友だち追加で結果をご覧いただけます。
         </p>
         <a href="https://line.me/R/ti/p/@YOUR_LINE_ID" target="_blank" class="btn-line" id="btnLineAdd"
           onclick="onLineAdded()">
@@ -92,11 +93,8 @@
             <path
               d="M19.5 10.77C19.5 7.58 16.14 5 12 5C7.86 5 4.5 7.58 4.5 10.77C4.5 13.65 7.17 16.03 10.68 16.44C10.94 16.5 11.28 16.61 11.37 16.83C11.45 17.02 11.42 17.32 11.4 17.51L11.3 18.09C11.26 18.3 11.12 18.94 12.01 18.56C12.89 18.18 16.34 16.02 17.78 14.36C18.78 13.26 19.5 12.09 19.5 10.77Z" />
           </svg>
-          LINE友だち追加
+          LINE友だち追加して結果を見る
         </a>
-        <button class="btn-skip" id="btnSkipLine" onclick="startQuiz()">
-          登録せずに診断する →
-        </button>
       </div>
     </div>
   </section>
@@ -174,16 +172,7 @@
       <!-- Alternative Top 3 -->
       <div id="altResults" class="alt-results-grid"></div>
 
-      <!-- CTA -->
-      <div class="result-cta">
-        <a href="https://line.me/R/ti/p/@YOUR_LINE_ID" target="_blank" class="btn-line-cta" id="resultLineCta">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-            <path
-              d="M19.5 10.77C19.5 7.58 16.14 5 12 5C7.86 5 4.5 7.58 4.5 10.77C4.5 13.65 7.17 16.03 10.68 16.44C10.94 16.5 11.28 16.61 11.37 16.83C11.45 17.02 11.42 17.32 11.4 17.51L11.3 18.09C11.26 18.3 11.12 18.94 12.01 18.56C12.89 18.18 16.34 16.02 17.78 14.36C18.78 13.26 19.5 12.09 19.5 10.77Z" />
-          </svg>
-          LINEで詳しい投資情報を受け取る
-        </a>
-      </div>
+
 
       <!-- Retry -->
       <div class="retry-section">
