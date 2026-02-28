@@ -313,6 +313,7 @@ ol {
     position: relative;
     width: 100%;
     height: 100vh;
+    height: 100svh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -801,6 +802,7 @@ ol {
 .contact__cta {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     padding: 16px 48px;
     border: 1px solid var(--color-border-hover);
     font-size: 0.75rem;
@@ -811,6 +813,7 @@ ol {
     transition: all var(--duration-fast) var(--ease-out);
     cursor: pointer;
     background: none;
+    text-align: center;
 }
 
 .contact__cta:hover {
@@ -932,8 +935,8 @@ ol {
     .experience__stats {
         flex-direction: column;
         gap: var(--space-md);
-        align-items: flex-end;
-        text-align: right;
+        align-items: center;
+        text-align: center;
     }
 
     .footer__inner {
