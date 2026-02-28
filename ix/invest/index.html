@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IX 投資タイプ診断 | あなたに最適な投資スタイルを発見</title>
+  <meta name="description" content="IX 投資タイプ診断であなたに最適な投資カテゴリを発見。金融・不動産・オルタナティブ投資の中からあなたにぴったりのスタイルを分析します。">
+  <!-- OGP -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="IX 投資タイプ診断">
+  <meta property="og:description" content="あなたに最適な投資スタイルを診断。金融・不動産・オルタナティブ投資からぴったりのカテゴリを発見します。">
+  <meta property="og:site_name" content="IX Investment Diagnosis">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/ix/invest/style.css">
+</head>
+
+<body>
+
+  <!-- ===== Hero Section ===== -->
+  <section id="hero">
+    <!-- Geometric Decorations -->
+    <div class="geo-decor-1"></div>
+    <div class="geo-decor-2"></div>
+    <div class="geo-decor-3"></div>
+    <div class="geo-decor-4"></div>
+    <div class="geo-line-1"></div>
+    <div class="geo-line-2"></div>
+    <!-- Floating particles -->
+    <div class="particles" id="particles"></div>
+
+    <div class="hero-badge">
+      <span class="dot"></span>
+      IX Investment Diagnosis
+    </div>
+    <h1 class="hero-title">IX 投資タイプ診断</h1>
+    <div class="hero-separator"></div>
+    <p class="hero-subtitle">あなたに最適な投資スタイルを<br>4つのカテゴリから診断します</p>
+    <p class="hero-description">
+      投資の世界は多種多様。金融・不動産・オルタナティブ、<br>
+      あなたの性格や志向に合った投資スタイルを見つけましょう。
+    </p>
+    <div class="type-preview">
+      <div class="type-chip"><span class="color-dot" style="background:#4a9eff"></span>金融</div>
+      <div class="type-chip"><span class="color-dot" style="background:#2ecc71"></span>不動産</div>
+      <div class="type-chip"><span class="color-dot" style="background:#c9a96e"></span>オルタナティブ</div>
+      <div class="type-chip"><span class="color-dot" style="background:#95a5a6"></span>その他</div>
+    </div>
+    <button class="btn-start" id="btnStartHero" onclick="showLineSection()">
+      診断をはじめる
+      <span class="arrow">→</span>
+    </button>
+  </section>
+
+  <!-- ===== LINE Registration Section ===== -->
+  <section id="lineSection">
+    <div class="container">
+      <div class="line-card">
+        <div class="line-icon-wrapper">
+          <svg class="line-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="12" fill="#06C755" />
+            <path
+              d="M39 21.54C39 15.15 32.28 10 24 10C15.72 10 9 15.15 9 21.54C9 27.29 14.34 32.06 21.36 32.88C21.87 32.99 22.56 33.22 22.74 33.65C22.9 34.04 22.84 34.63 22.79 35.01L22.59 36.18C22.52 36.6 22.24 37.88 24.01 37.12C25.78 36.36 32.68 32.04 35.56 28.72C37.56 26.52 39 24.18 39 21.54Z"
+              fill="white" />
+            <path
+              d="M21 18.5H20C19.72 18.5 19.5 18.72 19.5 19V25C19.5 25.28 19.72 25.5 20 25.5H21C21.28 25.5 21.5 25.28 21.5 25V19C21.5 18.72 21.28 18.5 21 18.5Z"
+              fill="#06C755" />
+            <path
+              d="M28 18.5H27C26.72 18.5 26.5 18.72 26.5 19V22.38L23.88 18.74C23.86 18.71 23.83 18.68 23.81 18.65C23.81 18.65 23.8 18.64 23.8 18.64C23.78 18.63 23.77 18.61 23.75 18.6C23.75 18.6 23.74 18.59 23.73 18.59C23.72 18.58 23.7 18.57 23.68 18.56C23.67 18.56 23.66 18.55 23.66 18.55C23.64 18.54 23.62 18.53 23.6 18.53C23.59 18.52 23.58 18.52 23.57 18.52C23.55 18.51 23.54 18.51 23.52 18.5H23.48C23.47 18.5 23.46 18.5 23.45 18.5H22.5C22.22 18.5 22 18.72 22 19V25C22 25.28 22.22 25.5 22.5 25.5H23.5C23.78 25.5 24 25.28 24 25V21.62L26.63 25.27C26.67 25.33 26.73 25.38 26.79 25.41C26.79 25.41 26.8 25.42 26.81 25.42C26.83 25.43 26.84 25.44 26.86 25.44C26.87 25.45 26.88 25.45 26.89 25.46C26.91 25.46 26.92 25.47 26.94 25.47C26.96 25.48 26.98 25.48 27 25.49H28C28.28 25.49 28.5 25.27 28.5 24.99V18.99C28.5 18.71 28.28 18.49 28 18.49V18.5Z"
+              fill="#06C755" />
+            <path
+              d="M18 24H15.5V19C15.5 18.72 15.28 18.5 15 18.5H14C13.72 18.5 13.5 18.72 13.5 19V25C13.5 25.13 13.55 25.26 13.65 25.35C13.74 25.45 13.87 25.5 14 25.5H18C18.28 25.5 18.5 25.28 18.5 25V24.5C18.5 24.22 18.28 24 18 24Z"
+              fill="#06C755" />
+            <path
+              d="M34.5 20.5C34.78 20.5 35 20.28 35 20V19C35 18.72 34.78 18.5 34.5 18.5H30.5C30.37 18.5 30.24 18.55 30.15 18.65C30.05 18.74 30 18.87 30 19V25C30 25.13 30.05 25.26 30.15 25.35C30.24 25.45 30.37 25.5 30.5 25.5H34.5C34.78 25.5 35 25.28 35 25V24.5C35 24.22 34.78 24 34.5 24H31.5V22.75H34.5C34.78 22.75 35 22.53 35 22.25V21.75C35 21.47 34.78 21.25 34.5 21.25H31.5V20H34.5V20.5Z"
+              fill="#06C755" />
+          </svg>
+        </div>
+        <h2 class="line-title">LINE友だち追加で<br>診断スタート</h2>
+        <p class="line-desc">
+          診断結果の詳細レポートや、あなたに最適な<br>
+          投資情報をLINEでお届けします。
+        </p>
+        <a href="https://line.me/R/ti/p/@YOUR_LINE_ID" target="_blank" class="btn-line" id="btnLineAdd"
+          onclick="onLineAdded()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+            <path
+              d="M19.5 10.77C19.5 7.58 16.14 5 12 5C7.86 5 4.5 7.58 4.5 10.77C4.5 13.65 7.17 16.03 10.68 16.44C10.94 16.5 11.28 16.61 11.37 16.83C11.45 17.02 11.42 17.32 11.4 17.51L11.3 18.09C11.26 18.3 11.12 18.94 12.01 18.56C12.89 18.18 16.34 16.02 17.78 14.36C18.78 13.26 19.5 12.09 19.5 10.77Z" />
+          </svg>
+          LINE友だち追加
+        </a>
+        <button class="btn-skip" id="btnSkipLine" onclick="startQuiz()">
+          登録せずに診断する →
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STEP 1: Category Quiz ===== -->
+  <section id="quiz1">
+    <div class="container">
+      <div class="step-indicator">
+        <div class="step-badge">STEP 1</div>
+        <div class="step-label">投資カテゴリ診断</div>
+      </div>
+      <div class="progress-wrapper">
+        <div class="progress-info">
+          <span class="progress-label">Progress</span>
+          <span class="progress-count" id="progress1Current"><strong>1</strong> / 5</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress1Fill" style="width: 20%"></div>
+        </div>
+      </div>
+
+      <div class="question-card" id="questionCard1"></div>
+
+      <div class="validation-message" id="validationMsg1"></div>
+
+      <div class="quiz-nav">
+        <button class="btn-nav" id="btnPrev1" onclick="prevStep1()" disabled>← 前へ</button>
+        <button class="btn-nav primary" id="btnNext1" onclick="nextStep1()">次へ →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STEP 2: Alternative Detail Quiz ===== -->
+  <section id="quiz2">
+    <div class="container">
+      <div class="step-indicator">
+        <div class="step-badge alt">STEP 2</div>
+        <div class="step-label">オルタナティブ詳細診断</div>
+      </div>
+      <div class="progress-wrapper">
+        <div class="progress-info">
+          <span class="progress-label">Progress</span>
+          <span class="progress-count" id="progress2Current"><strong>1</strong> / 5</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress2Fill" style="width: 20%"></div>
+        </div>
+      </div>
+
+      <div class="question-card" id="questionCard2"></div>
+
+      <div class="validation-message" id="validationMsg2"></div>
+
+      <div class="quiz-nav">
+        <button class="btn-nav" id="btnPrev2" onclick="prevStep2()" disabled>← 前へ</button>
+        <button class="btn-nav primary" id="btnNext2" onclick="nextStep2()">次へ →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Results Section ===== -->
+  <section id="results">
+    <div class="container">
+      <div class="results-header">
+        <div class="results-badge">
+          <span>✓</span> Diagnosis Complete
+        </div>
+        <h2 class="results-title">あなたの投資タイプ</h2>
+        <p class="results-subtitle" id="resultSubtitle"></p>
+      </div>
+
+      <!-- Main Result -->
+      <div id="mainResult"></div>
+
+      <!-- Alternative Top 3 -->
+      <div id="altResults" class="alt-results-grid"></div>
+
+      <!-- CTA -->
+      <div class="result-cta">
+        <a href="https://line.me/R/ti/p/@YOUR_LINE_ID" target="_blank" class="btn-line-cta" id="resultLineCta">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+            <path
+              d="M19.5 10.77C19.5 7.58 16.14 5 12 5C7.86 5 4.5 7.58 4.5 10.77C4.5 13.65 7.17 16.03 10.68 16.44C10.94 16.5 11.28 16.61 11.37 16.83C11.45 17.02 11.42 17.32 11.4 17.51L11.3 18.09C11.26 18.3 11.12 18.94 12.01 18.56C12.89 18.18 16.34 16.02 17.78 14.36C18.78 13.26 19.5 12.09 19.5 10.77Z" />
+          </svg>
+          LINEで詳しい投資情報を受け取る
+        </a>
+      </div>
+
+      <!-- Retry -->
+      <div class="retry-section">
+        <button class="btn-retry" onclick="retryQuiz()">
+          ↻ もう一度診断する
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Loading Overlay ===== -->
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">分析しています...</div>
+    <div class="loading-sub">あなたに最適な投資スタイルを診断中</div>
+  </div>
+
+  <script src="/ix/invest/app.js"></script>
+</body>
+
+</html>
