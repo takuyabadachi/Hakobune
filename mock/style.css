@@ -350,6 +350,8 @@ ol {
     z-index: 2;
     text-align: center;
     padding: 0 var(--space-md);
+    margin-bottom: 80px;
+    /* offset for scroll indicator to visually center */
 }
 
 .hero__eyebrow {
@@ -799,7 +801,6 @@ ol {
 .contact__cta {
     display: inline-flex;
     align-items: center;
-    gap: var(--space-sm);
     padding: 16px 48px;
     border: 1px solid var(--color-border-hover);
     font-size: 0.75rem;
@@ -837,8 +838,10 @@ ol {
 
 .footer__inner {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    gap: var(--space-md);
+    text-align: center;
 }
 
 .footer__logo {
@@ -931,6 +934,8 @@ ol {
     .experience__stats {
         flex-direction: column;
         gap: var(--space-md);
+        align-items: flex-end;
+        text-align: right;
     }
 
     .footer__inner {
