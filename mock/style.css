@@ -852,6 +852,7 @@ ol {
     font-weight: var(--fw-light);
     letter-spacing: 0.25em;
     text-transform: uppercase;
+    flex: 1;
 }
 
 .footer__links {
@@ -875,6 +876,8 @@ ol {
     font-size: 0.65rem;
     color: var(--color-text-tertiary);
     letter-spacing: 0.1em;
+    flex: 1;
+    text-align: right;
 }
 
 /* ============================================
